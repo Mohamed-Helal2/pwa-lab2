@@ -21,6 +21,6 @@
     Content-Type = "application/manifest+json"
 
 [[headers]]
-  for = "/*.png"
+  for = "/*.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000"
