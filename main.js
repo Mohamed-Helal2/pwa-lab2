@@ -25,7 +25,8 @@ class Router {
   init() {
     // Handle browser back/forward buttons
     window.addEventListener('popstate', (e) => {
-      this.handleRoute(e.state?.route || 'home');
+      const route = e.state?.route || this.getRouteFromHash();
+      this.handleRoute(route);
     });
 
     // Handle navigation clicks
@@ -38,8 +39,14 @@ class Router {
     });
 
     // Initial route
-    const hash = window.location.hash.slice(1) || 'home';
-    this.navigate(hash, false);
+    const initialRoute = this.getRouteFromHash();
+    this.navigate(initialRoute, false);
+  }
+
+  getRouteFromHash() {
+    const hash = window.location.hash.slice(1);
+    const validRoutes = ['home', 'about', 'posts'];
+    return validRoutes.includes(hash) ? hash : 'home';
   }
 
   navigate(route, pushState = true) {
