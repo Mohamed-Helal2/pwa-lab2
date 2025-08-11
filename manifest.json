@@ -1,0 +1,58 @@
+{
+  "name": "PWA Posts App",
+  "short_name": "PWA Posts",
+  "description": "A Progressive Web App for browsing posts with offline functionality",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#3B82F6",
+  "background_color": "#FFFFFF",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["productivity", "social"],
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "640x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile view of PWA Posts App"
+    },
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop view of PWA Posts App"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Posts",
+      "short_name": "Posts",
+      "description": "Go directly to the posts page",
+      "url": "#posts",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
